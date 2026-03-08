@@ -1,49 +1,83 @@
-# Build output
-bin/
-obj/
+# Build artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+artifacts/
+publish/
 
-# Visual Studio / Rider
+# Test and coverage output
+TestResults/
+coverage/
+coverage-report/
+*.trx
+*.coverage
+*.coveragexml
+
+# IDE and user-specific files
 .vs/
 .idea/
-*.user
 *.suo
+*.user
 *.userosscache
+*.userprefs
+*.rsuser
 *.sln.docstates
 
-# Rider
-.idea/
-.cursorrules
+# VS Code: ignore local files, keep shared workspace config
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# dotnet
-*.swp
-project.lock.json
-project.fragment.lock.json
-artifacts/
+# NuGet and packages
+*.nupkg
+*.snupkg
+packages/
+!**/packages/build/
 
-# Environment / secrets
-appsettings.Development.json
-appsettings.Local.json
-*.env
-.env
-
-# EF Core migrations snapshot conflicts (keep migrations, ignore temp)
-*.dbmdl
-*.jfm
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Node (for Angular)
+# Node / frontend artifacts
 node_modules/
 dist/
 .angular/
+.npm/
+.pnpm-store/
+yarn-error.log*
+npm-debug.log*
 
-# Angular build
-*.js.map
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
 
-# Test results
-TestResults/
-coverage/
-*.trx
-*.coveragexml
+# Local databases and logs
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+*.log
+logs/
+
+# Temporary/editor files
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Legacy/project lock files
+project.lock.json
+project.fragment.lock.json
+
+# Misc
+.cursorrules
+/docs
