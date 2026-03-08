@@ -81,3 +81,4 @@ project.fragment.lock.json
 # Misc
 .cursorrules
 /docs
+.vscode/*
